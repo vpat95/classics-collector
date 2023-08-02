@@ -45,3 +45,12 @@ li {
 .log-status{
   float: right;
 }
+
+.sale {
+  background: rgba(131, 160, 219, 0.1); 
+  width: 300px;
+  height: 475px;
+  margin: 10px;
+  border-radius: 15px;
+  color: red;
+}

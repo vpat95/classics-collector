@@ -12,7 +12,7 @@ function SearchAndFilter(){
                 <option>Under 25,000</option>
                 <option>Under 10,000</option>
             </select>
-            <label htmlFor='stock'> Sale Pending </label>
+            <label htmlFor='stock'> Remove Sale Pending </label>
             <input name='stock' type='checkbox'></input>
         </>
     )

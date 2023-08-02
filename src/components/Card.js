@@ -1,14 +1,14 @@
 import React from "react";
 //import img1 from '../../public/images/gtr.webp'
 
-function Card({make, model, year, price, image, specs}){
+function Card({make, model, year, price, image, specs, salePending}){
 
     const carSpecs = Object.values(specs).map(spec =>{
         return <li key={spec}>{spec}</li>
     })
 
     return(
-        <div className="card">
+        <div className={salePending ? 'sale': 'card'}>
             <h2 className="card-header">{make} {model}</h2>
             <img src={image} alt='gtr'></img> 
             <h4>Year:{year}</h4>
