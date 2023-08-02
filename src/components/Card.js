@@ -9,14 +9,14 @@ function Card({make, model, year, price, image, specs, salePending}){
 
     return(
         <div className={salePending ? 'sale': 'card'}>
-            <h2 className="card-header">{make} {model}</h2>
+            <h2 className="card-header">{year} {make} {model}</h2>
             <img src={image} alt='gtr'></img> 
-            <h4>Year:{year}</h4>
             <h3> Price:${price}</h3>
             <h4>Specs</h4>
             <ul>
                 {carSpecs}
             </ul>
+            <button>Remove Listing</button>
         </div>
     )
 }
