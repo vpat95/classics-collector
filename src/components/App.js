@@ -1,13 +1,20 @@
 import '../styles/App.css';
 import Header from './Header';
-import HomePage from './HomePage';
+import Card from './Card';
 import SearchAndFilter from './SearchAndFilter';
+import carData from '../data/carData'
+
 function App() {
+
+  const carCards = carData.map(car => <Card key={car.id} make={car.make} model={car.model} year={car.year} price={car.price.toLocaleString()} image={car.image} specs={car.specs}/>)
+
   return (
     <div className="App">
-      <Header />
+      <Header isLoggedIn={false}/>
       <SearchAndFilter />
-      <HomePage />
+      <main>
+        {carCards}
+      </main>
     </div>
   );
 }
