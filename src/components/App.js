@@ -1,23 +1,20 @@
-import logo from '../logo.svg';
 import '../styles/App.css';
+import Header from './Header';
+import Card from './Card';
+import SearchAndFilter from './SearchAndFilter';
+import carData from '../data/carData'
 
 function App() {
+
+  const carCards = carData.map(car => <Card key={car.id} make={car.make} model={car.model} year={car.year} price={car.price.toLocaleString()} image={car.image} specs={car.specs}/>)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header isLoggedIn={false}/>
+      <SearchAndFilter />
+      <main>
+        {carCards}
+      </main>
     </div>
   );
 }
