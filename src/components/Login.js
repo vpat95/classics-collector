@@ -1,13 +1,25 @@
-import React, {useState} from "react";
+import React,{useState} from "react";
 
-function Login(){
-    const [login, setLogin] = useState(false)
+function Login({user, setUser}){
 
-    function handleClick(){
-        setLogin((login) => !login)
+    function handleLoginClick(){
+        setUser({
+            id: 1,
+            username: 'Vivek'
+        })
+    }
+
+    function handleLogoutClick(){
+        setUser(null)
     }
     return (
-        <button onClick = {handleClick} className="login">{login ? 'Logout': 'Login'}</button>
+        <nav>
+            {user ? (
+            <button onClick = {handleLogoutClick}>Logout</button>
+            ) : (
+            <button onClick = {handleLoginClick}>Login</button>
+            )}
+        </nav>
     )
 }
 

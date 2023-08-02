@@ -54,3 +54,7 @@ li {
   border-radius: 15px;
   color: red;
 }
+
+.new-car-form {
+  padding-bottom: 100px;
+}

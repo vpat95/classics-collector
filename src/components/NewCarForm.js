@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 
-function NewCarForm(){
+function NewCarForm({addCar}){
+
     const [formData, setFormData] = useState({
         make: "",
         model: "",
@@ -13,7 +14,7 @@ function NewCarForm(){
             transmission: "manual"
         }
     })
-    
+
     function handleChange(e){
         if (e.target.id === 'hp' || e.target.id === 'drivetrain' || e.target.id ==='transmission'){
             const key = (e.target.id)
@@ -32,8 +33,8 @@ function NewCarForm(){
     }
 
     function handleSubmit(e){
-        e.preventDefault()
-        console.log(formData)
+        e.preventDefault()  
+        addCar(formData)      
     }
 
     return (
