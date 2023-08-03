@@ -16,7 +16,7 @@ function SearchAndFilter(){
     }
 
     return (
-        <>
+        <div className='filter'>
             <label htmlFor="search"> Search </label>
             <input id="search" onChange={handleChange} name='search' type='text' value={formData.search}></input>
             <label htmlFor="price"> Filter by Price </label>
@@ -29,7 +29,7 @@ function SearchAndFilter(){
             </select>
             <label htmlFor='stock'> Remove Sale Pending </label>
             <input id="inStock" name='stock' type='checkbox' onChange={(e) => setFormData({...formData, inStock:e.target.checked})} checked={formData.inStock}></input>
-        </>
+        </div>
     )
 }
 

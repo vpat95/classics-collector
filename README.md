@@ -1,3 +1,14 @@
+# Component Heirarchy
+
+|- App
+|--- Header
+|----- Login
+|--- SearchAndFilter
+|--- HomePage
+|----- Card
+|----- NewCarForm
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -5,7 +5,7 @@ function Header(){
     const [user, setUser] = useState(false)
     return (
         <header className="header">
-            <h1>Classic Collector</h1>
+            <h1>Classic JDM Collector</h1>
             <nav>
                 <Login user={user} setUser={setUser}/>
             </nav>
