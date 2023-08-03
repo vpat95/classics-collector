@@ -9,6 +9,7 @@ function NewCarForm({addCar}){
         year: "",
         price: "",
         image: "",
+        available: true,
         specs: {
             hp: "",
             drivetrain: "awd",

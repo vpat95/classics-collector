@@ -14,7 +14,7 @@ code {
     monospace;
 }
 
-main {
+.cards {
   display:flex;
   flex-wrap: wrap;
 }
@@ -62,3 +62,4 @@ li {
 .new-car-form input {
   width: 200px!important;
 }
+

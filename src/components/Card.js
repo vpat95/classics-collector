@@ -13,7 +13,7 @@ function Card({car, removeCar}){
 
 
     return(
-        <div id={car.id} className={car.salePending ? 'sale': 'card'}>
+        <div id={car.id} className={car.available ? 'card': 'sale'}>
             <h2 className="card-header">{car.year} {car.make} {car.model}</h2>
             <img src={car.image} alt={car.model}></img> 
             <h3> Price:${car.price.toLocaleString()}</h3>
